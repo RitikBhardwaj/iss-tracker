@@ -3,7 +3,9 @@ const url = "https://api.wheretheiss.at/v1/satellites/25544";
 //update the information every 1.5 seconds
 setInterval(getLatLng, 1500);
 function getLatLng() {
-  $.getJSON(url, data => {
+  $.ajax({
+    url: url
+  }).done(data => {
     $("#latitude").text(" " + data.latitude.toFixed(3) + " ");
     $("#longitude").text(" " + data.longitude.toFixed(3) + " ");
     $("#altitude").text(" " + data.altitude.toFixed(2) + " ");
