@@ -8,7 +8,7 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-const port = 8000 || process.env.PORT;
+const port = process.env.PORT;
 
 app.listen(port, function() {
   console.log(`[+]Server started at port ${port}`);
