@@ -8,6 +8,7 @@
 body {
     /* background-image: url('https://images.unsplash.com/photo-1447433865958-f402f562b843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80'); */
     background-image: url('https://media.giphy.com/media/WtfrF8owsyz6alCkyg/giphy.gif');
+    /* background-image: url('https://media.giphy.com/media/giW9XESwOrCeY/giphy.gif'); */
     overflow-x: hidden;
     background-position: center;
     background-size: cover;
@@ -29,6 +30,16 @@ main {
 div#api-content {
     flex: 3;
     height: 100vh;
+}
+
+div#api-content h3#map-text {
+    background: rgb(245, 246, 247);
+    padding: 3px;
+    font-size: 12px;
+    margin-left: 20px;
+    width: 160px;
+    margin-bottom: 0px;
+    margin-top: 3px;
 }
 
 div#info-text {
@@ -70,21 +81,59 @@ div#info-text p {
     margin-bottom: 20px;
 }
 
-div.api-info {
-    margin-left: 20px;
-    background: white;
+div#api-content ul {
     display: flex;
-    max-width: 300px;
-    min-width: 300px;
-    flex-direction: column;
-    align-items: left;
+    align-items: center;
     margin-top: 20px;
-    opacity: 0.9;
-    /* border-radius: 5px; */
-    /* Box shadow */
-    -webkit-box-shadow: -1px 1px 22px 1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -1px 1px 22px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: -1px 1px 22px 1px rgba(0, 0, 0, 0.75);
+    margin-left: 20px;
+}
+
+div#api-content ul li {
+    background-color: rgb(245, 246, 247);
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 5px;
+    font-size: 16px;
+    width: 150px;
+    displaY: flex;
+    justify-content: center;
+    border-radius: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: 2px black solid;
+}
+
+div#api-content div#result {
+    background-color: rgb(245, 246, 247);
+    width: 460px;
+    /* height: 100px; */
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+}
+
+div#api-content div#mapid {
+    height: 370px;
+    width: 460px;
+    margin-left: 20px;
+    margin-top: 20px;
+    z-index: 10;
+    border: 1px solid black;
+}
+
+div#api-content div#result h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 button#change-giphy {
