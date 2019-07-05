@@ -81,6 +81,8 @@ div#info-text p {
     margin-bottom: 20px;
 }
 
+/* ------ Menu styling ------ */
+
 div#api-content ul {
     display: flex;
     align-items: center;
@@ -105,6 +107,8 @@ div#api-content ul li {
     outline: 2px black solid;
 }
 
+/*  --- ISS api data result styling --- */
+
 div#api-content div#result {
     background-color: rgb(245, 246, 247);
     width: 460px;
@@ -118,6 +122,8 @@ div#api-content div#result {
     flex-direction: column;
     border: 2px solid black;
 }
+
+/* Map styling */
 
 div#api-content div#mapid {
     height: 370px;
@@ -136,6 +142,8 @@ div#api-content div#result h3 {
     padding-bottom: 10px;
 }
 
+/* Change Giphy button styling */
+
 button#change-giphy {
     position: absolute;
     bottom: 0px;
@@ -150,6 +158,8 @@ button#change-giphy {
     border-radius: 18px;
     cursor: pointer;
 }
+
+/* ----- footer styling ----- */
 
 footer {
     height: 100px;

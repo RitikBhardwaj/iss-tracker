@@ -2,14 +2,16 @@ $(document).ready(() => {
   const url = "https://api.wheretheiss.at/v1/satellites/25544";
   printInfo(0);
 
+  // Initializing the map
   const mymap = L.map("mapid").setView([0, 0], 3);
+  // Change the map icon
   const myIssIcon = L.icon({
     iconUrl: "../images/200iss.png",
     iconSize: [50, 32],
     iconAnchor: [25, 16]
   });
   const marker = L.marker([0, 0], { icon: myIssIcon }).addTo(mymap);
-
+  //Add mapbox tiles
   L.tileLayer(
     "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoicml0aWstYmhhcmR3YWoiLCJhIjoiY2p4cDMzbHd6MDk5eDNubzIzb28xNmNwcyJ9.NiInb99O-Fa_BvA5ZyfjwQ",
     {
@@ -22,6 +24,7 @@ $(document).ready(() => {
     }
   ).addTo(mymap);
 
+  //to fetch the data every 3 seconds
   setInterval(() => {
     fetch(url)
       .then(response => {
@@ -69,7 +72,7 @@ $(document).ready(() => {
       );
     });
   }
-
+  //function to print the data onto the DOM
   function printInfo(number) {
     fetch(url)
       .then(response => {
