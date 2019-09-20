@@ -27,7 +27,7 @@ https://developers.giphy.com
 
 - HTML
 - CSS
-- Jquery
+- JQuery
 
 #### Backend
 
